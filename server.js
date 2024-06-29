@@ -12,6 +12,7 @@ const testRoutes = require("./routes/testRoutes");
 const authRoutes = require("./routes/authRoutes");
 const errorMiddleware = require("./middlewares/errorMiddleware");
 const userRoutes = require("./routes/userRoutes")
+const jobsRoutes = require("./routes/jobsRoutes")
 
 
 // app initialization
@@ -32,7 +33,7 @@ const port  = process.env.PORT || 6000;
 app.use('/api/v1/test', testRoutes);
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/user', userRoutes);
-
+app.use('/api/v1/jobs', jobsRoutes);
 //validation middleware
 app.use(errorMiddleware);
 
